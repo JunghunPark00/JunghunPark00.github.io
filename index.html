@@ -1,35 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JunghunPark00 | Developer & Creator</title>
-    <meta name="description" content="Personal website of JunghunPark00">
+    <title>JunghunPark00 - Portfolio</title>
+    <meta name="description" content="Personal website of JunghunPark00, styled like an E-book.">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <div class="logo">JunghunPark00</div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <h1>Building the <span>Future</span>,<br>One Line at a Time.</h1>
-        <p class="subtitle">Welcome to my personal corner of the web. I'm a developer passionate about creating intuitive and dynamic digital experiences.</p>
-        <a href="https://github.com/JunghunPark00" class="cta-button" target="_blank">Visit my GitHub</a>
-    </main>
+    <div class="progress-container">
+        <div class="progress-bar" id="readingProgress"></div>
+    </div>
 
-    <footer>
-        <p>&copy; 2026 JunghunPark00. All rights reserved.</p>
-    </footer>
+    <div class="book-container">
+        <header class="profile-section">
+            <div class="photo-placeholder"></div>
+            <h1>JunghunPark00</h1>
+            <p class="intro-lead">Developer. Thinker. Writer.</p>
+            <div class="cv-placeholder">
+                <a href="#" class="action-button">Download CV (Coming Soon)</a>
+            </div>
+        </header>
+
+        <section id="intro">
+            <h2>Preface: About Me</h2>
+            <p>
+                Welcome to my digital collection. I am a developer passionate about building systems that matter.
+                Like a well-written book, I believe code should be structured, meaningful, and accessible to everyone.
+                This site serves as a record of my journey, my projects, and the knowledge I've gathered along the way.
+            </p>
+            <p>
+                I specialize in [Your Specialty Here], but my curiosity often leads me to explore new chapters in
+                technology.
+            </p>
+        </section>
+
+        <section id="education">
+            <h2>Chapter 1: Education</h2>
+
+            <div class="resume-item">
+                <div class="resume-header">
+                    <span class="role">Degree Name (e.g., BS in Computer Science)</span>
+                    <span class="date">202X - 202X</span>
+                </div>
+                <span class="institution">University Name</span>
+                <p>
+                    Brief description of your studies, key coursework, or thesis topic.
+                </p>
+            </div>
+
+            <!-- Add more education items here if needed -->
+        </section>
+
+        <section id="experience">
+            <h2>Chapter 2: Experience</h2>
+
+            <div class="resume-item">
+                <div class="resume-header">
+                    <span class="role">Software Engineer Intern</span>
+                    <span class="date">Summer 202X</span>
+                </div>
+                <span class="institution">Company Name</span>
+                <p>
+                    Worked on backend services, optimized database queries, and collaborated with a cross-functional
+                    team to deliver features on time.
+                </p>
+            </div>
+
+            <div class="resume-item">
+                <div class="resume-header">
+                    <span class="role">Research Assistant</span>
+                    <span class="date">202X - Present</span>
+                </div>
+                <span class="institution">Lab Name / University</span>
+                <p>
+                    Conducting research in [Area], analyzing data, and preparing manuscripts for publication.
+                </p>
+            </div>
+        </section>
+
+        <section id="publications">
+            <h2>Chapter 3: Publications</h2>
+            <p>
+                <em>"Title of Your Paper or Article"</em><br>
+                <strong>Junghun Park</strong>, Co-author Name.<br>
+                Published in <em>Journal/Conference Name</em>, Year.
+            </p>
+            <p>
+                <em>"Another Interesting Project or Paper"</em><br>
+                <strong>Junghun Park</strong>.<br>
+                Published in <em>Medium/Blog</em>, Year.
+            </p>
+        </section>
+
+        <footer>
+            <p>Page 1 of 1 &bull; &copy; 2026 JunghunPark00</p>
+        </footer>
+    </div>
+
+    <script>
+        // Simple script for the reading progress bar
+        window.onscroll = function () {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("readingProgress").style.width = scrolled + "%";
+        };
+    </script>
 </body>
+
 </html>
